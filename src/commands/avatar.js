@@ -15,7 +15,7 @@ module.exports = {
     await interaction.reply({
       embeds: [
         buildEmbed({ title: `${user.username}'s Avatar` }).setImage(
-          user.displayAvatarURL({ size: 1024 }),
+          user.displayAvatarURL({ size: 1024, forceStatic: false }),
         ),
       ],
     });

@@ -37,7 +37,7 @@ module.exports = {
     await interaction.editReply({
       embeds: [
         buildEmbed({ title: 'User Info', fields }).setThumbnail(
-          user.displayAvatarURL(),
+          user.displayAvatarURL({ forceStatic: false }),
         ),
       ],
     });
