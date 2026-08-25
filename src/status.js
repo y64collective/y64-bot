@@ -1,6 +1,6 @@
 const { ActivityType } = require('discord.js');
 const si = require('systeminformation');
-const { MINECRAFT_SERVER_ADDRESS, WEBSITE_URL } = require('./config');
+const { DOMAIN } = require('./config');
 const { fetchServerStatus } = require('./statusApi');
 
 const STATUS_INTERVAL_MS = 30_000;
@@ -10,7 +10,7 @@ let statusIndex = 0;
 async function nextStatusText() {
   switch (statusIndex) {
     case 1: {
-      return `Web: ${WEBSITE_URL}`;
+      return `Web: ${DOMAIN}`;
     }
     case 2: {
       const data = await fetchServerStatus();
@@ -25,7 +25,7 @@ async function nextStatusText() {
       return `RAM: ${((active / total) * 100).toFixed(0)}%`;
     }
     default:
-      return `IP: ${MINECRAFT_SERVER_ADDRESS}`;
+      return `IP: ${DOMAIN}`;
   }
 }
 

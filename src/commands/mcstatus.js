@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { buildEmbed, COLORS } = require('../utils/embeds');
-const { MINECRAFT_SERVER_ADDRESS } = require('../config');
+const { DOMAIN } = require('../config');
 const { fetchServerStatus } = require('../statusApi');
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
               fields: [
                 {
                   name: 'Address',
-                  value: `\`${MINECRAFT_SERVER_ADDRESS}\``,
+                  value: `\`${DOMAIN}\``,
                 },
                 {
                   name: 'Status',
@@ -43,7 +43,7 @@ module.exports = {
             fields: [
               {
                 name: 'Address',
-                value: `\`${MINECRAFT_SERVER_ADDRESS}\``,
+                value: `\`${DOMAIN}\``,
               },
               {
                 name: 'Status',
