@@ -99,7 +99,7 @@ const messageCreate = {
           embeds: [
             buildEmbed({
               title: 'Commands Only',
-              description: `The message from ${message.author} was removed`,
+              description: 'Please use commands only',
               color: COLORS.error,
             }),
           ],
